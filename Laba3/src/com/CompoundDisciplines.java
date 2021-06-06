@@ -11,7 +11,7 @@ class CompoundDisciplines implements Disciplines {
 	}
 	
 	@Override
-	public void AddConfig(int[] is) {
+	public void AddConfig(int[] is, int name) {
 		throw new UnsupportedOperationException("Операция не поддерживается"); 
 	}
 	

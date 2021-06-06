@@ -35,13 +35,13 @@ public class Knowledge implements IKSA {
 	}
 	
 	@Override
-	public IKSA ksaMethod(int i) {
-		IKSA knowledge = new Knowledge((int)(Math.random()*(i)));
-		return knowledge;
+	public void ksaMethod(int i) {
+		name = "Знания";
+		description = Integer.toString((int)(Math.random()*(10) + i));
 	}
 
 	@Override
-	public IKSA attrMethod(int i) {
+	public void attrMethod(int i) {
 		throw new UnsupportedOperationException("Операция не поддерживается");
 	}
 }

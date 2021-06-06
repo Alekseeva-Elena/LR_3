@@ -33,27 +33,37 @@ public class Attributes implements IKSA {
 	}
 
 	@Override
-	public IKSA ksaMethod(int i) {
+	public void ksaMethod(int i) {
 		throw new UnsupportedOperationException("Операция не поддерживается");
 	}
 
 	@Override
-	public IKSA attrMethod(int i) {
-		IKSA attributes = null;
+	public void attrMethod(int i) {
 		switch (i){
-		case (0):
-			attributes = new Attributes("Зав.кафедрой", (int)(Math.random()*(i)));
+		case (0): 
+			name = "Зав.кафедрой";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		case (1):
-			attributes = new Attributes("Преподаватель", (int)(Math.random()*(i)));
+			name = "Преподаватель";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		case (2):
-			attributes = new Attributes("Институт", (int)(Math.random()*(i)));
+			name = "Институт";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		case (3):
-			attributes = new Attributes("Корпус", (int)(Math.random()*(i)));
+			name = "Корпус";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		case (4):
-			attributes = new Attributes("Аудитория", (int)(Math.random()*(i)));
+			name = "Аудитория";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		default:
-			attributes = new Attributes("Кафедра", (int)(Math.random()*(i)));
+			name = "Кафедра";
+			description = Integer.toString((int)(Math.random()*(10) + i));
+			break;
 		}
-		return attributes;
 	}
 }

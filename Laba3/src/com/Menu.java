@@ -13,8 +13,6 @@ public class Menu {
         Thread t1 = new Thread(new Generator(Discip));
         Thread t2 = new Thread(new Generator(Discip));
 
-        AddElementSecure b = new AddElementSecure(Discip);
-
         t1.start();
         t2.start();
 
@@ -24,38 +22,13 @@ public class Menu {
 
         t1.interrupt();
         t2.interrupt();
+        
+        for (int i = 0; i < Discip.size(); i++)
+        	if (Discip.get(i).getName() == null)
+        		Discip.remove(i);
+        
         for (int i = 0; i < Discip.size(); i++)
         	plan.add(Discip.get(i));
-
-//		ApplicationContext context = new AnnotationConfigApplicationContext("com");
-//		plan = context.getBean("plan", AcademicPlan.class);
-//		plan.addDisciplines();
-		
-		// Запрашиваем одну из команд
-		//System.out.println("Введите одну из следующих команд: ");
-		//System.out.println("create - создать учебный план");
-		//System.out.println("quit - выйти из программы");
-		
-//        System.out.println("console");
-//		Scanner console = new Scanner(System.in);
-//		String inputData = console.nextLine();
-
-		// Пока не введена команда "quit"
-		// ожидается ввод правильной команды
-//		while (!inputData.equalsIgnoreCase("quit")) {
-//			 Создание учебного плана
-//		    if (inputData.equalsIgnoreCase("create")) {
-//				plan = PlanBuilder.createPlan();
-//				break;
-//			}
-//			else { // Сообщение о неправильной команде
-//				System.out.println("\nНеверная команда!");
-//				System.out.println("Введите одну из следующих команд: ");
-//		   		System.out.println("create - создать учебный план");
-//		    	System.out.println("quit - выйти из программы");
-//		    	inputData = console.nextLine();
-//			}
-//		}
 		
 		// ожидается ввод следующих комманд
 

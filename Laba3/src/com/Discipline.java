@@ -50,38 +50,38 @@ public class Discipline implements Disciplines {
 		this.attr = attr;
 	}
 	
-	public void AddConfig(int[] c)
+	public void AddConfig(int[] c, int name)
     {
 		Knowledge inKnowledge = new Knowledge();
 		inKnowledge.ksaMethod(c[0]);
 		inKSA.add(inKnowledge);
 
 		Abilities inAbilities = new Abilities();
-		inAbilities.ksaMethod(c[0]);
+		inAbilities.ksaMethod(c[1]);
 		inKSA.add(inAbilities);
 		
 		Skills inSkills = new Skills();
-		inSkills.ksaMethod(c[0]);
+		inSkills.ksaMethod(c[2]);
 		inKSA.add(inSkills);
 		
 		Knowledge outKnowledge = new Knowledge();
-		outKnowledge.ksaMethod(c[1]);
-		inKSA.add(outKnowledge);
+		outKnowledge.ksaMethod(c[3]);
+		outKSA.add(outKnowledge);
 
 		Abilities outAbilities = new Abilities();
-		outAbilities.ksaMethod(c[1]);
-		inKSA.add(outAbilities);
+		outAbilities.ksaMethod(c[4]);
+		outKSA.add(outAbilities);
 		
 		Skills outSkills = new Skills();
-		outSkills.ksaMethod(c[1]);
-		inKSA.add(outSkills);
+		outSkills.ksaMethod(c[5]);
+		outKSA.add(outSkills);
 		
 		for (int i = 0; i < attr.size(); i++) {
 			Attributes attributes = new Attributes();
-			attributes.attrMethod(c[0]);
+			attributes.attrMethod(c[6]);
 			attr.add(attributes);
 		}
-        addName((int)(Math.random()*(10)));
+        addName(name);
     }
 	
 	

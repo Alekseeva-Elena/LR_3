@@ -7,6 +7,6 @@ public interface IKSA {
 	public static final String description = "";
 	public void showKSA();
 	public String getDescription();
-	public IKSA ksaMethod(int i);
-	public IKSA attrMethod(int i);
+	public void ksaMethod(int i);
+	public void attrMethod(int i);
 }

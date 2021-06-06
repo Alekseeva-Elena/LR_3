@@ -34,13 +34,13 @@ public class Abilities implements IKSA {
 	}
 
 	@Override
-	public IKSA ksaMethod(int i) {
-		IKSA abilities = new Abilities((int)(Math.random()*(i)));
-		return abilities;
+	public void ksaMethod(int i) {
+		name = "Умения";
+		description = Integer.toString((int)(Math.random()*(10) + i));
 	}
 
 	@Override
-	public IKSA attrMethod(int i) {
+	public void attrMethod(int i) {
 		throw new UnsupportedOperationException("Операция не поддерживается");
 	}
 }

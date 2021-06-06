@@ -6,5 +6,5 @@ public interface Disciplines {
     public void remove(Disciplines disc);
 	public void discPrint();
 	public Disciplines getDiscipline();
-	public void AddConfig(int[] is);
+	public void AddConfig(int[] is, int name);
 }
