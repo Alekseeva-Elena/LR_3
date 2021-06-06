@@ -9,7 +9,7 @@ public class Menu {
 	public static void main(String[] args) {
 		AcademicPlan plan = new AcademicPlan("План");
 		ArrayList<Discipline> Discip = new ArrayList<Discipline>();
-		
+
         Thread t1 = new Thread(new Generator(Discip));
         Thread t2 = new Thread(new Generator(Discip));
 
