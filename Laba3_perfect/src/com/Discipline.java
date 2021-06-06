@@ -8,7 +8,7 @@ public class Discipline implements Disciplines {
 	private String name;
 	ArrayList<IKSA> inKSA = new ArrayList<IKSA>();
 	ArrayList<IKSA> outKSA = new ArrayList<IKSA>();
-	ArrayList<IKSA> attr = new ArrayList<IKSA>((int)(Math.random()*(10)));
+	ArrayList<IKSA> attr = new ArrayList<IKSA>();
 	
 	@Override
 	public void add(Disciplines disc){
@@ -76,7 +76,8 @@ public class Discipline implements Disciplines {
 		outSkills.ksaMethod(c[5]);
 		outKSA.add(outSkills);
 		
-		for (int i = 0; i < attr.size(); i++) {
+		int n =(int)(Math.random()*(5));
+		for (int i = 0; i < n; i++) {
 			Attributes attributes = new Attributes();
 			attributes.attrMethod(c[6]);
 			attr.add(attributes);

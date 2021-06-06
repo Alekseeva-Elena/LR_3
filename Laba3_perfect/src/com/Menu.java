@@ -10,6 +10,7 @@ public class Menu {
 		AcademicPlan plan = new AcademicPlan("План");
 		ArrayList<Discipline> Discip = new ArrayList<Discipline>();
 
+		// Создаём два потока
         Thread t1 = new Thread(new Generator(Discip));
         Thread t2 = new Thread(new Generator(Discip));
 
@@ -17,21 +18,16 @@ public class Menu {
         t2.start();
 
         try {
-            Thread.sleep(100); // блокируем поток на 100 мс
+            Thread.sleep(100); // блокируем основной поток на 100 мс
         } catch (InterruptedException e) {}
 
         t1.interrupt();
         t2.interrupt();
         
-//        for (int i = 0; i < Discip.size(); i++)
-//        	if (Discip.get(i).getName() == null)
-//        		Discip.remove(i);
-        
         for (int i = 0; i < Discip.size(); i++)
         	plan.add(Discip.get(i));
 		
 		// ожидается ввод следующих комманд
-
 		plan.printPlan();
 		System.out.println("\nВведите одну из следующих команд: ");
 		System.out.println("info - вывести информацию о какой-либо дисциплине");

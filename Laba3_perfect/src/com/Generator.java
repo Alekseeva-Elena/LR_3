@@ -47,7 +47,7 @@ public class Generator implements Runnable  {
             try {
             	d.add(disp1.getDiscipline());
             	
-            	r = (int)(Math.random()*(6));
+            	r = (int)(Math.random()*(5));
                 System.out.println("Current thread id:" +  Thread.currentThread().getId() + " |Preset: " + r);
             	name = (int)(Math.random()*(1000));
             	flag = false;
